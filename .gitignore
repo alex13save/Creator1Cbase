@@ -34,3 +34,6 @@ lib/
 *.app/
 
 # End of https://www.gitignore.io/api/lazarus
+
+#Other
+*.zip
