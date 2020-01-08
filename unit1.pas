@@ -5,8 +5,8 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  Buttons, StdCtrls, IniFiles, windows;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls, LazFileUtils,
+  Buttons, StdCtrls, IniFiles, windows, lazutf8;
 
 type
 
@@ -179,7 +179,7 @@ begin
 
   //Проверки корректности полей
   if CaptionBase.Text = '' then begin
-		ShowError('Не указано наименование базы!'); exit;
+     ShowError('Не указано наименование базы!'); exit;
   end;
 
   pr:=GetPravilo(Pravilo.Text);
@@ -252,10 +252,13 @@ begin
       Ini.WriteInteger(SR,'OrderInTree',-1);
       Ini.WriteInteger(SR,'External',0);
     end;
+  end
+  else
+  begin
+       SR:=pr.StarterRoot;
   end;
 
   //Создаем запись
-
   Ini.WriteString(BaseNameStarter,'Connect','File="'+BasePath+'";');
   Ini.WriteString(BaseNameStarter,'ID',GetUID);
   Ini.WriteInteger(BaseNameStarter,'OrderInList',-1);

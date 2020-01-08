@@ -10,19 +10,13 @@ object Form1: TForm1
   OnCreate = FormCreate
   Position = poScreenCenter
   ShowHint = True
-  LCLVersion = '1.4.4.0'
+  LCLVersion = '2.0.4.0'
   object CaptionBase: TLabeledEdit
     Left = 8
     Height = 23
     Top = 24
     Width = 328
-    EditLabel.AnchorSideLeft.Control = CaptionBase
-    EditLabel.AnchorSideRight.Control = CaptionBase
-    EditLabel.AnchorSideRight.Side = asrBottom
-    EditLabel.AnchorSideBottom.Control = CaptionBase
-    EditLabel.Left = 8
     EditLabel.Height = 15
-    EditLabel.Top = 6
     EditLabel.Width = 328
     EditLabel.Caption = 'Наименование:'
     EditLabel.ParentColor = False
@@ -34,13 +28,7 @@ object Form1: TForm1
     Height = 23
     Top = 24
     Width = 168
-    EditLabel.AnchorSideLeft.Control = Suffix
-    EditLabel.AnchorSideRight.Control = Suffix
-    EditLabel.AnchorSideRight.Side = asrBottom
-    EditLabel.AnchorSideBottom.Control = Suffix
-    EditLabel.Left = 344
     EditLabel.Height = 15
-    EditLabel.Top = 6
     EditLabel.Width = 168
     EditLabel.Caption = 'Суффикс:'
     EditLabel.ParentColor = False
