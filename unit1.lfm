@@ -1,0 +1,110 @@
+object Form1: TForm1
+  Left = 329
+  Height = 144
+  Top = 130
+  Width = 543
+  BorderStyle = bsDialog
+  Caption = 'Создать информационную базу 1С'
+  ClientHeight = 144
+  ClientWidth = 543
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  ShowHint = True
+  LCLVersion = '1.4.4.0'
+  object CaptionBase: TLabeledEdit
+    Left = 8
+    Height = 23
+    Top = 24
+    Width = 328
+    EditLabel.AnchorSideLeft.Control = CaptionBase
+    EditLabel.AnchorSideRight.Control = CaptionBase
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = CaptionBase
+    EditLabel.Left = 8
+    EditLabel.Height = 15
+    EditLabel.Top = 6
+    EditLabel.Width = 328
+    EditLabel.Caption = 'Наименование:'
+    EditLabel.ParentColor = False
+    TabOrder = 0
+    OnKeyPress = CaptionBaseKeyPress
+  end
+  object Suffix: TLabeledEdit
+    Left = 344
+    Height = 23
+    Top = 24
+    Width = 168
+    EditLabel.AnchorSideLeft.Control = Suffix
+    EditLabel.AnchorSideRight.Control = Suffix
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = Suffix
+    EditLabel.Left = 344
+    EditLabel.Height = 15
+    EditLabel.Top = 6
+    EditLabel.Width = 168
+    EditLabel.Caption = 'Суффикс:'
+    EditLabel.ParentColor = False
+    TabOrder = 1
+    OnKeyPress = SuffixKeyPress
+    OnKeyUp = SuffixKeyUp
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 515
+    Height = 24
+    Hint = 'Выбрать суффикс (F4)'
+    Top = 24
+    Width = 23
+    Caption = '...'
+    OnClick = SpeedButton1Click
+  end
+  object Label1: TLabel
+    Left = 8
+    Height = 15
+    Top = 54
+    Width = 184
+    Caption = 'Правило  местоположения базы:'
+    ParentColor = False
+  end
+  object Pravilo: TComboBox
+    Left = 8
+    Height = 23
+    Top = 73
+    Width = 504
+    ItemHeight = 15
+    OnKeyPress = PraviloKeyPress
+    OnKeyUp = PraviloKeyUp
+    TabOrder = 2
+  end
+  object PraviloEdit: TSpeedButton
+    Left = 515
+    Height = 24
+    Hint = 'Изменить правила (F2)'
+    Top = 72
+    Width = 23
+    Caption = '...'
+    OnClick = PraviloEditClick
+  end
+  object BitBtn1: TBitBtn
+    Left = 128
+    Height = 30
+    Top = 104
+    Width = 128
+    Caption = 'Создать'
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = BitBtn1Click
+    TabOrder = 3
+  end
+  object BitBtn2: TBitBtn
+    Left = 263
+    Height = 30
+    Top = 104
+    Width = 105
+    Cancel = True
+    Caption = 'Закрыть'
+    Kind = bkCancel
+    ModalResult = 2
+    OnClick = BitBtn2Click
+    TabOrder = 4
+  end
+end
