@@ -269,8 +269,9 @@ begin
   Ini.WriteString(BaseNameStarter,'App','Auto');
   Ini.WriteString(BaseNameStarter,'WA','1');
   Ini.WriteString(BaseNameStarter,'Version','8.3');
+  Ini.WriteString(BaseNameStarter,'AppArch','x86_64_prt'); //Приоритет 64 разрядная платформа
 
-	Ini.Free;
+  Ini.Free;
 
   Close;
 
